@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #000;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: teal;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 26px;
+        }
+
+        button:hover {
+            background-color: darkcyan;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const colors = ["#f0f0f0", "#ff9999", "#99ccff", "#c5e1a5", "#ffcc80"];
+            let currentIndex = 0;
+
+            const button = document.getElementById("colorButton");
+
+            button.addEventListener("click", function () {
+                window.open("https://www.naver.com/hysing", "_blank");
+            });
+
+            
+            setInterval(function () {
+                currentIndex = (currentIndex + 1) % colors.length;
+                button.style.backgroundColor = colors[currentIndex];
+            }, 1000);
+        });
+    </script>
+</head>
+<body>
+    <h1>내가 이런걸 만들어보다니</h1>
+    <p>기획자로 지내다보니 개발자가 되고싶어서 공부하는 중<br>
+    블로그에 공부하는 내용들 기록 하고있습니다
+    </p>
+    <button id="colorButton">구경해도됨</button>
+</body>
+</html>
